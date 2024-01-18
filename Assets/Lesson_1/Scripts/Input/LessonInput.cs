@@ -130,6 +130,158 @@ public partial class @LessonInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Merchant"",
+            ""id"": ""0e6b0adb-71a6-424a-ae77-5c8b22aa87a2"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""408abecc-2384-408d-b361-a91cb14f2017"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": ""NormalizeVector2"",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Switch_behaviour_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""16eb27de-4cd4-486e-9d99-b9ce271220b5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Switch_behaviour_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""340f0601-2ad6-47e1-a352-2b90d27c6c4c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Switch_behaviour_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a58604d-eacd-46cf-a3cc-325e895f9938"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Trade"",
+                    ""type"": ""Button"",
+                    ""id"": ""a836d42d-a380-487b-9ea9-8dc4c1a31ea8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""11434a7e-2590-46d5-a64f-52cfc55ae605"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a1f15394-dd3c-4d19-9777-93400ae70dfc"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a4a04760-150d-4629-9542-a605a570e82f"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""87144e07-ac7e-40dd-bfff-70c9a199dfea"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""747ec920-35e4-461f-9c24-3d3d64e8f78d"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95e949ee-a3dd-487d-a038-13959a1e2783"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch_behaviour_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4f59176-470b-44aa-afb0-149ba515c900"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch_behaviour_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d9fa0526-fee0-48ad-a0cf-f207614d5dbb"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch_behaviour_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a23e54dc-f9bd-4fe0-8099-6122e48aa735"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Trade"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -141,6 +293,13 @@ public partial class @LessonInput: IInputActionCollection2, IDisposable
         m_Weapon_Switch_weapon_2 = m_Weapon.FindAction("Switch_weapon_2", throwIfNotFound: true);
         m_Weapon_Switch_weapon_3 = m_Weapon.FindAction("Switch_weapon_3", throwIfNotFound: true);
         m_Weapon_Reload = m_Weapon.FindAction("Reload", throwIfNotFound: true);
+        // Merchant
+        m_Merchant = asset.FindActionMap("Merchant", throwIfNotFound: true);
+        m_Merchant_Move = m_Merchant.FindAction("Move", throwIfNotFound: true);
+        m_Merchant_Switch_behaviour_1 = m_Merchant.FindAction("Switch_behaviour_1", throwIfNotFound: true);
+        m_Merchant_Switch_behaviour_2 = m_Merchant.FindAction("Switch_behaviour_2", throwIfNotFound: true);
+        m_Merchant_Switch_behaviour_3 = m_Merchant.FindAction("Switch_behaviour_3", throwIfNotFound: true);
+        m_Merchant_Trade = m_Merchant.FindAction("Trade", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -276,6 +435,84 @@ public partial class @LessonInput: IInputActionCollection2, IDisposable
         }
     }
     public WeaponActions @Weapon => new WeaponActions(this);
+
+    // Merchant
+    private readonly InputActionMap m_Merchant;
+    private List<IMerchantActions> m_MerchantActionsCallbackInterfaces = new List<IMerchantActions>();
+    private readonly InputAction m_Merchant_Move;
+    private readonly InputAction m_Merchant_Switch_behaviour_1;
+    private readonly InputAction m_Merchant_Switch_behaviour_2;
+    private readonly InputAction m_Merchant_Switch_behaviour_3;
+    private readonly InputAction m_Merchant_Trade;
+    public struct MerchantActions
+    {
+        private @LessonInput m_Wrapper;
+        public MerchantActions(@LessonInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Merchant_Move;
+        public InputAction @Switch_behaviour_1 => m_Wrapper.m_Merchant_Switch_behaviour_1;
+        public InputAction @Switch_behaviour_2 => m_Wrapper.m_Merchant_Switch_behaviour_2;
+        public InputAction @Switch_behaviour_3 => m_Wrapper.m_Merchant_Switch_behaviour_3;
+        public InputAction @Trade => m_Wrapper.m_Merchant_Trade;
+        public InputActionMap Get() { return m_Wrapper.m_Merchant; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MerchantActions set) { return set.Get(); }
+        public void AddCallbacks(IMerchantActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MerchantActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MerchantActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Switch_behaviour_1.started += instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_1.performed += instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_1.canceled += instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_2.started += instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_2.performed += instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_2.canceled += instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_3.started += instance.OnSwitch_behaviour_3;
+            @Switch_behaviour_3.performed += instance.OnSwitch_behaviour_3;
+            @Switch_behaviour_3.canceled += instance.OnSwitch_behaviour_3;
+            @Trade.started += instance.OnTrade;
+            @Trade.performed += instance.OnTrade;
+            @Trade.canceled += instance.OnTrade;
+        }
+
+        private void UnregisterCallbacks(IMerchantActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Switch_behaviour_1.started -= instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_1.performed -= instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_1.canceled -= instance.OnSwitch_behaviour_1;
+            @Switch_behaviour_2.started -= instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_2.performed -= instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_2.canceled -= instance.OnSwitch_behaviour_2;
+            @Switch_behaviour_3.started -= instance.OnSwitch_behaviour_3;
+            @Switch_behaviour_3.performed -= instance.OnSwitch_behaviour_3;
+            @Switch_behaviour_3.canceled -= instance.OnSwitch_behaviour_3;
+            @Trade.started -= instance.OnTrade;
+            @Trade.performed -= instance.OnTrade;
+            @Trade.canceled -= instance.OnTrade;
+        }
+
+        public void RemoveCallbacks(IMerchantActions instance)
+        {
+            if (m_Wrapper.m_MerchantActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMerchantActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MerchantActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MerchantActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MerchantActions @Merchant => new MerchantActions(this);
     public interface IWeaponActions
     {
         void OnFire(InputAction.CallbackContext context);
@@ -283,5 +520,13 @@ public partial class @LessonInput: IInputActionCollection2, IDisposable
         void OnSwitch_weapon_2(InputAction.CallbackContext context);
         void OnSwitch_weapon_3(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+    }
+    public interface IMerchantActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnSwitch_behaviour_1(InputAction.CallbackContext context);
+        void OnSwitch_behaviour_2(InputAction.CallbackContext context);
+        void OnSwitch_behaviour_3(InputAction.CallbackContext context);
+        void OnTrade(InputAction.CallbackContext context);
     }
 }
