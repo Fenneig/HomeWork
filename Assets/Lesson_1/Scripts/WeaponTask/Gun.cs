@@ -1,4 +1,5 @@
-﻿using Lesson_1.Scripts.WeaponTask.Magazine;
+﻿using Lesson_1.Scripts.WeaponTask.FirePattern;
+using Lesson_1.Scripts.WeaponTask.Magazine;
 using TMPro;
 using UnityEngine;
 
