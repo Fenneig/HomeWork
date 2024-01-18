@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Lesson_1.Scripts.WeaponTask
+namespace Lesson_1.Scripts.WeaponTask.FirePattern
 {
     public interface IFirePattern
     {
