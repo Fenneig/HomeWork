@@ -260,6 +260,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Ballon",
+            "id": "86e55036-c5bd-49ae-82f1-e6107e7ab220",
+            "actions": [
+                {
+                    "name": "Burst",
+                    "type": "Button",
+                    "id": "7704c2dc-9e91-4f3f-b7d4-83a2a74ac1ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReloadScene",
+                    "type": "Button",
+                    "id": "8a2c2661-4607-4e59-a8c7-abf964891c73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "60caa225-3af2-444a-8d0d-aacb4346d63f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Burst",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d37e39c-8638-4103-8f7b-b3efccdb1c72",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
