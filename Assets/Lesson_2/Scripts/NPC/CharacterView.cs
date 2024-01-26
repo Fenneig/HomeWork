@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC
@@ -36,18 +37,21 @@ namespace Lesson_2.Scripts.NPC
         
         public void StopRest() => _animator.SetBool(IsResting, false);
 
+        [UsedImplicitly]
         public void OnWork()
         {
             WorkAction?.Invoke();
             CheckStatus?.Invoke();
         }
 
+        [UsedImplicitly]
         public void OnRest()
         {
             RestAction?.Invoke();
             CheckStatus?.Invoke();
         }
 
+        [UsedImplicitly]
         public void OnDeliver()
         {
             DeliverAction?.Invoke();
