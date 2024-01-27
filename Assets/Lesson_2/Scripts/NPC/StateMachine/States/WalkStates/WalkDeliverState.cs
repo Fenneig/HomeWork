@@ -1,4 +1,6 @@
-﻿namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
+﻿using Lesson_2.Scripts.NPC.Units;
+
+namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
 {
     public class WalkDeliverState : WalkState
     {

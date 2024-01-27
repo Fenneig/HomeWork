@@ -1,18 +1,19 @@
-﻿using Lesson_2.Scripts.NPC.StateMachine;
+﻿using Lesson_2.Scripts.NPC.Configs;
+using Lesson_2.Scripts.NPC.StateMachine;
 using UnityEngine;
 
-namespace Lesson_2.Scripts.NPC
+namespace Lesson_2.Scripts.NPC.Units
 {
     [RequireComponent(typeof(CharacterController))]
     public class Character : MonoBehaviour
     {
-        [SerializeField] private CharacterConfig _characterConfig;
         [SerializeField] private CharacterView _view;
         
         private CharacterStateMachine _stateMachine;
         private CharacterController _controller;
-        [SerializeField] private CharacterStatus _characterStatus;
-
+        private CharacterStatus _characterStatus;
+        private CharacterConfig _characterConfig;
+        
         public CharacterController Controller => _controller;
         public Vector3 Position => transform.position;
         public StatePositions StatePositions { get; private set; }
@@ -20,8 +21,9 @@ namespace Lesson_2.Scripts.NPC
         public CharacterStatus Status => _characterStatus;
         public float MoveSpeed => _characterConfig.MoveSpeed;
 
-        public void Initialize(Vector3 restPosition, Vector3 deliveryPosition, Vector3 workPosition)
+        public void Initialize(StatePositions statePositions, CharacterConfig config)
         {
+            _characterConfig = config;
             _controller = GetComponent<CharacterController>();
             _view.Initialize();
             _characterStatus = new CharacterStatus(_characterConfig);
@@ -32,17 +34,14 @@ namespace Lesson_2.Scripts.NPC
             
             StatePositions = new StatePositions
             {
-                RestPosition = restPosition,
-                DeliveryPosition = deliveryPosition,
-                WorkPosition = workPosition
+                RestPosition = statePositions.RestPosition,
+                DeliveryPosition = statePositions.DeliveryPosition,
+                WorkPosition = statePositions.WorkPosition
             };
             _stateMachine = new CharacterStateMachine(this);
         }
 
-        private void OnRestAction()
-        {
-            _characterStatus.RestoreEnergy();
-        }
+        private void OnRestAction() => _characterStatus.RestoreEnergy();
 
         private void OnWorkAction()
         {
@@ -50,15 +49,9 @@ namespace Lesson_2.Scripts.NPC
             _characterStatus.TryAddInInventory(_characterConfig.WorkConfig.AddInInventoryAmount);
         }
 
-        private void OnDeliverAction()
-        {
-            _characterStatus.FreeInventory();
-        }
+        private void OnDeliverAction() => _characterStatus.FreeInventory();
 
-        private void Update()
-        {
-            _stateMachine.Update();
-        }
+        private void Update() => _stateMachine.Update();
 
         private void OnDestroy()
         {

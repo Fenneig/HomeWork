@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Lesson_2.Scripts.NPC.Units;
+using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
 {

@@ -1,28 +1,34 @@
 using System;
-using UnityEngine;
+using Lesson_2.Scripts.NPC.Configs;
 
-namespace Lesson_2.Scripts.NPC
+namespace Lesson_2.Scripts.NPC.Units
 {
-    [Serializable]
     public class CharacterStatus
     {
-        private CharacterConfig _characterConfig;
-        [SerializeField] private int _currentEnergy;
-        [SerializeField] private int _currentInventoryCapacity;
+        private readonly int _maxEnergy;
+        private readonly int _maxInventoryCapacity;
+        
+        private int _currentEnergy;
+        private int _currentInventoryCapacity;
 
         public bool IsEnergyEmpty { get; private set; }
         public bool IsInventoryFull { get; private set; }
 
+        public event Action<int> EnergyUpdated;
+        public event Action<int> InventoryUpdated;
+
         public CharacterStatus(CharacterConfig characterConfig)
         {
-            _characterConfig = characterConfig;
-            _currentEnergy = characterConfig.MaxEnergy;
+            _maxEnergy = characterConfig.MaxEnergy;
+            _maxInventoryCapacity = characterConfig.MaxInventoryCapacity;
+            _currentEnergy = _maxEnergy;
             _currentInventoryCapacity = 0;
         }
 
         public void SpendEnergy(int amount)
         {
             _currentEnergy -= amount;
+            EnergyUpdated?.Invoke(_currentEnergy);
 
             if (_currentEnergy > 0) return;
             
@@ -32,21 +38,23 @@ namespace Lesson_2.Scripts.NPC
 
         public void RestoreEnergy()
         {
-            _currentEnergy = _characterConfig.MaxEnergy;
+            _currentEnergy = _maxEnergy;
+            EnergyUpdated?.Invoke(_currentEnergy);
             IsEnergyEmpty = false;
         }
 
         public bool TryAddInInventory(int amount)
         {
-            if (_currentInventoryCapacity + amount > _characterConfig.MaxInventoryCapacity)
+            if (_currentInventoryCapacity + amount > _maxInventoryCapacity)
             {
                 IsInventoryFull = true;
                 return false;
             }
             
             _currentInventoryCapacity += amount;
+            InventoryUpdated?.Invoke(_currentInventoryCapacity);
             
-            if (_currentInventoryCapacity == _characterConfig.MaxInventoryCapacity) 
+            if (_currentInventoryCapacity == _maxInventoryCapacity) 
                 IsInventoryFull = true;
             
             return true;
@@ -55,6 +63,7 @@ namespace Lesson_2.Scripts.NPC
         public void FreeInventory()
         {
             _currentInventoryCapacity = 0;
+            InventoryUpdated?.Invoke(_currentInventoryCapacity);
             IsInventoryFull = false;
         }
     }

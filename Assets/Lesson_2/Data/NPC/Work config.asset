@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: a804c83a3da94238be4bb34df1b4eb89, type: 3}
   m_Name: Work config
   m_EditorClassIdentifier: Lesson_2:Lesson_2.Scripts.NPC:WorkConfig
   <WorkEnergyCost>k__BackingField: 1
-  <RestEnergyRestore>k__BackingField: 10
   <AddInInventoryAmount>k__BackingField: 1

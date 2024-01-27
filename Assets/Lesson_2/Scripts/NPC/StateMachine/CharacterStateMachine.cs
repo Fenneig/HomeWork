@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Lesson_2.Scripts.NPC.StateMachine.States;
 using Lesson_2.Scripts.NPC.StateMachine.States.WalkStates;
+using Lesson_2.Scripts.NPC.Units;
 using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC.StateMachine

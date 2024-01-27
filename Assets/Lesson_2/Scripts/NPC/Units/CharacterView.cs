@@ -2,7 +2,7 @@ using System;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace Lesson_2.Scripts.NPC
+namespace Lesson_2.Scripts.NPC.Units
 {
     [RequireComponent(typeof(Animator))]
     public class CharacterView : MonoBehaviour
