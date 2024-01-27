@@ -63,7 +63,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
 
         private Quaternion GetRotationFrom(Vector3 velocity)
         {
-            return velocity.x switch
+            return velocity.z switch
             {
                 > 0 => TurnRight,
                 < 0 => TurnLeft,
