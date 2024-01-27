@@ -16,6 +16,6 @@ MonoBehaviour:
     <Speed>k__BackingField: 5
   _airbornStateConfig:
     _jumpingStateConfig:
-      _maxHeight: 0.41
-      _timeToReachMaxHeight: 0.2
+      _maxHeight: 2.13
+      _timeToReachMaxHeight: 1
     _speed: 4

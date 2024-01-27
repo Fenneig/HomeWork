@@ -14,8 +14,17 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.AirBorn
         public override void Enter()
         {
             base.Enter();
+            
+            View.StartJumping();
 
             Data.YVelocity = _config.StartYVelocity;
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            View.StopJumping();
         }
 
         public override void Update()
