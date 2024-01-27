@@ -1,5 +1,4 @@
-﻿using Character;
-using Lesson_2.Scripts.LessonCharacter.StateMachine.States.AirBorn;
+﻿using Lesson_2.Scripts.LessonCharacter.StateMachine.States.AirBorn;
 using UnityEngine.InputSystem;
 
 namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
@@ -8,7 +7,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
     {
         private readonly ObstacleDetector _groundDetector;
         
-        public GroundedState(IStateSwitcher stateSwitcher, Lesson_2.Scripts.LessonCharacter.Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
+        public GroundedState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
         {
             _groundDetector = character.GroundDetector;
         }
@@ -17,6 +16,14 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
         {
             base.Enter();
             
+            View.StartGrounded();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            View.StopGrounded();
         }
 
         public override void Update()

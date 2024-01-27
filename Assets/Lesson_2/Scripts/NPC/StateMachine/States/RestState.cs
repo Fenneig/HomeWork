@@ -1,4 +1,5 @@
 ﻿using Lesson_2.Scripts.NPC.StateMachine.States.WalkStates;
+using Lesson_2.Scripts.NPC.Units;
 
 namespace Lesson_2.Scripts.NPC.StateMachine.States
 {
@@ -6,7 +7,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
     {
         private bool _isReadyForWork;
         
-        public RestState(IStateSwitcher stateSwitcher, Units.Character character) : base(stateSwitcher, character)
+        public RestState(IStateSwitcher stateSwitcher, Character character) : base(stateSwitcher, character)
         { }
 
         public override void Enter()

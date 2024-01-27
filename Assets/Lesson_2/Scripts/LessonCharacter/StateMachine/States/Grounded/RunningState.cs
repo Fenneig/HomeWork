@@ -6,17 +6,23 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
     {
         private RunningStateConfig _runningStateConfig;
 
-        public RunningState(IStateSwitcher stateSwitcher, Lesson_2.Scripts.LessonCharacter.Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
+        public RunningState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
             => _runningStateConfig = character.Config.RunningStateConfig;
 
         public override void Enter()
         {
             base.Enter();
             
-            View.StopIdling();
             View.StartRunning();
 
             Data.Speed = _runningStateConfig.Speed;
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            View.StopRunning();
         }
 
         public override void Update()

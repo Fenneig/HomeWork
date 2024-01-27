@@ -1,5 +1,4 @@
-﻿using Character;
-using Lesson_2.Scripts.LessonCharacter.StateMachine;
+﻿using Lesson_2.Scripts.LessonCharacter.StateMachine;
 using UnityEngine;
 
 namespace Lesson_2.Scripts.LessonCharacter

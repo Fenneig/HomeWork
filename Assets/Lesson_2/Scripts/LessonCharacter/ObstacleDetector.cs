@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Character
+namespace Lesson_2.Scripts.LessonCharacter
 {
     public class ObstacleDetector : MonoBehaviour
     {

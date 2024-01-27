@@ -1,7 +1,7 @@
 ﻿using Lesson_2.Scripts.LessonCharacter.StateMachine.States.Configs;
 using UnityEngine;
 
-namespace Character
+namespace Lesson_2.Scripts.LessonCharacter
 {
     [CreateAssetMenu(menuName = "Configs/CharacterConfig", fileName = "CharacterConfig")]
     public class CharacterConfig : ScriptableObject

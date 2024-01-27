@@ -1,5 +1,6 @@
 ﻿using Lesson_2.Scripts.NPC.Configs;
 using Lesson_2.Scripts.NPC.UI;
+using Lesson_2.Scripts.NPC.Units;
 using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC
@@ -9,7 +10,7 @@ namespace Lesson_2.Scripts.NPC
         [SerializeField] private Transform _restPosition;
         [SerializeField] private Transform _deliveryPosition;
         [SerializeField] private Transform _workPosition;
-        [SerializeField] private Units.Character _character;
+        [SerializeField] private Character _character;
         [SerializeField] private CharacterConfig _characterConfig;
         [SerializeField] private NpcUi _ui;
 

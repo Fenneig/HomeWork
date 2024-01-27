@@ -1,5 +1,4 @@
-﻿using Character;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
 {
@@ -8,7 +7,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
         protected readonly IStateSwitcher StateSwitcher;
         protected readonly CharacterMachineData Data;
 
-        private readonly Lesson_2.Scripts.LessonCharacter.Character _character;
+        private readonly Character _character;
 
         private static Quaternion TurnRight => new(0, 0, 0, 0);
         private static Quaternion TurnLeft => Quaternion.Euler(0, 180, 0);
@@ -18,7 +17,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
         protected CharacterView View => _character.View;
         protected bool IsHorizontalInputZero => Data.XInput == 0;
 
-        public MovementState(IStateSwitcher stateSwitcher, Lesson_2.Scripts.LessonCharacter.Character character, CharacterMachineData data)
+        public MovementState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data)
         {
             StateSwitcher = stateSwitcher;
             _character = character;
@@ -27,13 +26,17 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
 
         public virtual void Enter()
         {
-            Debug.Log(GetType());
+            Debug.Log($"Enter {GetType().ToString().Split(".")[^1]}");
+            
+            View.StartMovement();
 
             AddInputActionCallback();
         }
 
         public virtual void Exit()
         {
+            View.StopMovement();
+            
             RemoveInputActionCallback();
         }
 

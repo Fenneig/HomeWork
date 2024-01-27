@@ -13,7 +13,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine
         private List<IState> _states;
         private IState _currentState;
 
-        public CharacterStateMachine(Lesson_2.Scripts.LessonCharacter.Character character)
+        public CharacterStateMachine(Character character)
         {
             CharacterMachineData data = new CharacterMachineData();
             

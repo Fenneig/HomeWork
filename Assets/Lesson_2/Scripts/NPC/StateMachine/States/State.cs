@@ -5,7 +5,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
 {
     public class State : IState
     {
-        private readonly Units.Character _character;
+        private readonly Character _character;
         
         protected readonly IStateSwitcher StateSwitcher;
         
@@ -16,7 +16,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
         protected CharacterController CharacterController => _character.Controller;
         protected float CharacterMoveSpeed => _character.MoveSpeed;
 
-        protected State(IStateSwitcher stateSwitcher, Units.Character character)
+        protected State(IStateSwitcher stateSwitcher, Character character)
         {
             StateSwitcher = stateSwitcher;
             _character = character;

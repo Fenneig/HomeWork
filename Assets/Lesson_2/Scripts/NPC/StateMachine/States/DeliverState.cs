@@ -1,10 +1,11 @@
 ﻿using Lesson_2.Scripts.NPC.StateMachine.States.WalkStates;
+using Lesson_2.Scripts.NPC.Units;
 
 namespace Lesson_2.Scripts.NPC.StateMachine.States
 {
     public class DeliverState : State
     {
-        public DeliverState(IStateSwitcher stateSwitcher, Units.Character character) : base(stateSwitcher, character)
+        public DeliverState(IStateSwitcher stateSwitcher, Character character) : base(stateSwitcher, character)
         { }
 
         public override void Enter()
