@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
 {
@@ -8,16 +9,17 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
         protected readonly CharacterMachineData Data;
 
         private readonly Character _character;
+        private bool _isRunning;
 
-        private static Quaternion TurnRight => new(0, 0, 0, 0);
-        private static Quaternion TurnLeft => Quaternion.Euler(0, 180, 0);
+        private Quaternion TurnRight => new(0, 0, 0, 0);
+        private Quaternion TurnLeft => Quaternion.Euler(0, 180, 0);
 
         protected PlayerInput Input => _character.Input;
-        protected CharacterController CharacterController => _character.Controller;
         protected CharacterView View => _character.View;
         protected bool IsHorizontalInputZero => Data.XInput == 0;
+        protected bool IsRunning => _isRunning;
 
-        public MovementState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data)
+        protected MovementState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data)
         {
             StateSwitcher = stateSwitcher;
             _character = character;
@@ -50,11 +52,12 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
         {
             Vector3 velocity = GetConvertedVelocity();
 
-            CharacterController.Move(velocity * Time.deltaTime);
+            _character.Controller.Move(velocity * Time.deltaTime);
             _character.transform.rotation = GetRotationFrom(velocity);
         }
 
-        protected virtual void AddInputActionCallback() { }
+        protected virtual void AddInputActionCallback() 
+            => Input.Movement.SwitchRun.started += OnJumpKeyPressed;
 
         protected virtual void RemoveInputActionCallback() { }
 
@@ -71,5 +74,6 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States
         private Vector3 GetConvertedVelocity() => new(0, Data.YVelocity, Data.XVelocity);
 
         private float ReadHorizontalInput() => Input.Movement.Move.ReadValue<float>();
+        private void OnJumpKeyPressed(InputAction.CallbackContext context) => _isRunning = !_isRunning;
     }
 }

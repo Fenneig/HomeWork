@@ -7,9 +7,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.AirBorn
         private readonly ObstacleDetector _groundChecker;
         
         public FallingState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
-        {
-            _groundChecker = character.GroundDetector;
-        }
+            => _groundChecker = character.GroundDetector;
 
         public override void Enter()
         {

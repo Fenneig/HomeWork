@@ -6,11 +6,9 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
     public abstract class GroundedState : MovementState
     {
         private readonly ObstacleDetector _groundDetector;
-        
-        public GroundedState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
-        {
-            _groundDetector = character.GroundDetector;
-        }
+
+        protected GroundedState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data) 
+            => _groundDetector = character.GroundDetector;
 
         public override void Enter()
         {
@@ -48,9 +46,6 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
             Input.Movement.Jump.started -= OnJumpKeyPressed;
         }
 
-        private void OnJumpKeyPressed(InputAction.CallbackContext obj)
-        {
-            StateSwitcher.SwitchState<JumpingState>();
-        }
+        private void OnJumpKeyPressed(InputAction.CallbackContext context) => StateSwitcher.SwitchState<JumpingState>();
     }
 }

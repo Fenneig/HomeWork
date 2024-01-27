@@ -2,19 +2,19 @@
 
 namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
 {
-    public class RunningState : GroundedState
+    public class WalkState : GroundedState
     {
-        private RunningStateConfig _runningStateConfig;
+        private WalkStateConfig _walkStateConfig;
 
-        public RunningState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
-            => _runningStateConfig = character.Config.MoveStateConfig.RunningStateConfig;
+        public WalkState(IStateSwitcher stateSwitcher, Character character, CharacterMachineData data) : base(stateSwitcher, character, data)
+            => _walkStateConfig = character.Config.MoveStateConfig.WalkStateConfig;
 
         public override void Enter()
         {
             base.Enter();
             
             View.StartRunning();
-            Data.Speed = _runningStateConfig.Speed;
+            Data.Speed = _walkStateConfig.Speed;
             View.SetMoveSpeed(Data.Speed);
         }
 
@@ -32,8 +32,8 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine.States.Grounded
             if (IsHorizontalInputZero)
                 StateSwitcher.SwitchState<IdlingState>();
 
-            if (IsRunning == false)
-                StateSwitcher.SwitchState<WalkState>();
+            if (IsRunning)
+                StateSwitcher.SwitchState<RunningState>();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Lesson_2.Scripts.LessonCharacter.StateMachine
             {
                 new IdlingState(this, character, data),
                 new RunningState(this, character, data),
+                new WalkState(this, character, data),
                 new JumpingState(this, character, data),
                 new FallingState(this, character, data)
             };

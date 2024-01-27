@@ -13,6 +13,7 @@ namespace Lesson_2.Scripts.LessonCharacter
         private static readonly int IsMovement = Animator.StringToHash("isMovement");
         private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
         private static readonly int IsJumping = Animator.StringToHash("isJumping");
+        private static readonly int MoveSpeed = Animator.StringToHash("MoveSpeed");
 
         public void Initialize() => _animator = GetComponent<Animator>();
 
@@ -29,5 +30,6 @@ namespace Lesson_2.Scripts.LessonCharacter
         public void StopGrounded() => _animator.SetBool(IsGrounded, false);
         public void StartJumping() => _animator.SetBool(IsJumping, true);
         public void StopJumping() => _animator.SetBool(IsJumping, false);
+        public void SetMoveSpeed(float speed) => _animator.SetFloat(MoveSpeed, speed);
     }
 }
