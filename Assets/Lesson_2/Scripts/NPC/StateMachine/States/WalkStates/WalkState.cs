@@ -1,5 +1,4 @@
-﻿using Lesson_2.Scripts.NPC.Units;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
 {
@@ -11,7 +10,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
         
         protected bool IsDestinationReached;
 
-        protected WalkState(CharacterStateMachine stateMachine, Character character) : base(stateMachine, character)
+        protected WalkState(CharacterStateMachine stateMachine, Units.Character character) : base(stateMachine, character)
         { }
         
         public override void Enter()

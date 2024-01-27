@@ -1,10 +1,8 @@
-﻿using Lesson_2.Scripts.NPC.Units;
-
-namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
+﻿namespace Lesson_2.Scripts.NPC.StateMachine.States.WalkStates
 {
     public class WalkRestState : WalkState
     {
-        public WalkRestState(CharacterStateMachine stateMachine, Character character) : base(stateMachine, character)
+        public WalkRestState(CharacterStateMachine stateMachine, Units.Character character) : base(stateMachine, character)
         { }
 
         public override void Enter()

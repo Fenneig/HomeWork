@@ -1,12 +1,11 @@
 ﻿using Lesson_2.Scripts.NPC.UI;
-using Lesson_2.Scripts.NPC.Units;
 
 namespace Lesson_2.Scripts.NPC
 {
     public class UIMediator
     {
-        private NpcUi _ui;
-        public UIMediator(NpcUi ui, Character character)
+        private readonly NpcUi _ui;
+        public UIMediator(NpcUi ui, Units.Character character)
         {
             _ui = ui;
 

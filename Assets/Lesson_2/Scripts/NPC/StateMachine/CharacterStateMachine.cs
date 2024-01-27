@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Lesson_2.Scripts.NPC.StateMachine.States;
 using Lesson_2.Scripts.NPC.StateMachine.States.WalkStates;
-using Lesson_2.Scripts.NPC.Units;
 using UnityEngine;
 
 namespace Lesson_2.Scripts.NPC.StateMachine
@@ -13,7 +12,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine
         private List<IState> _states;
         private IState _currentState;
 
-        public CharacterStateMachine(Character character)
+        public CharacterStateMachine(Units.Character character)
         {
             _states = new List<IState>
             {

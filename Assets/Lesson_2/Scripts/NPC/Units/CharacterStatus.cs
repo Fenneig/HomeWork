@@ -11,6 +11,8 @@ namespace Lesson_2.Scripts.NPC.Units
         private int _currentEnergy;
         private int _currentInventoryCapacity;
 
+        public int CurrentEnergy => _currentEnergy;
+        public int CurrentInventoryCapacity => _currentInventoryCapacity;
         public bool IsEnergyEmpty { get; private set; }
         public bool IsInventoryFull { get; private set; }
 

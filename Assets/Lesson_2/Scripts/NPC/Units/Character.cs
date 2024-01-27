@@ -45,8 +45,8 @@ namespace Lesson_2.Scripts.NPC.Units
 
         private void OnWorkAction()
         {
-            _characterStatus.SpendEnergy(_characterConfig.WorkConfig.WorkEnergyCost);
-            _characterStatus.TryAddInInventory(_characterConfig.WorkConfig.AddInInventoryAmount);
+            if (_characterStatus.TryAddInInventory(_characterConfig.WorkConfig.AddInInventoryAmount))
+                _characterStatus.SpendEnergy(_characterConfig.WorkConfig.WorkEnergyCost);
         }
 
         private void OnDeliverAction() => _characterStatus.FreeInventory();

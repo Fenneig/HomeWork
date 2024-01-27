@@ -5,7 +5,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
 {
     public class State : IState
     {
-        private readonly Character _character;
+        private readonly Units.Character _character;
         
         protected readonly IStateSwitcher StateSwitcher;
         
@@ -16,7 +16,7 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
         protected CharacterController CharacterController => _character.Controller;
         protected float CharacterMoveSpeed => _character.MoveSpeed;
 
-        protected State(IStateSwitcher stateSwitcher, Character character)
+        protected State(IStateSwitcher stateSwitcher, Units.Character character)
         {
             StateSwitcher = stateSwitcher;
             _character = character;
@@ -24,12 +24,12 @@ namespace Lesson_2.Scripts.NPC.StateMachine.States
 
         public virtual void Enter()
         {
-            Debug.Log($"Enter state {GetType()}");
+            Debug.Log($"Enter state {GetType().ToString().Split(".")[^1]}");
         }
 
         public virtual void Exit()
         {
-            Debug.Log($"Exit state {GetType()}");
+            Debug.Log($"Exit state {GetType().ToString().Split(".")[^1]}");
         }
 
         public virtual void Update()
