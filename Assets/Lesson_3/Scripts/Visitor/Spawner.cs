@@ -14,7 +14,6 @@ namespace Lesson_3.Scripts.Visitor
         [SerializeField] private List<Transform> _spawnPoints;
         [SerializeField] private FoeFactory _foeFactory;
 
-        private Coroutine _spawn;
         private bool _isSpawnerWork;
         private List<Foe> _spawnedEnemies = new();
 
@@ -26,7 +25,7 @@ namespace Lesson_3.Scripts.Visitor
         public void StartWork()
         {
             _isSpawnerWork = true;
-            _spawn = StartCoroutine(Spawn());
+            StartCoroutine(Spawn());
         }
 
         public void StopWork()
