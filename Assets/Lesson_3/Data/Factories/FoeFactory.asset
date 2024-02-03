@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42541d94c6eb3541b1ce374c72955f8, type: 3}
+  m_Name: FoeFactory
+  m_EditorClassIdentifier: 
+  _humanPrefab: {fileID: 7523673223752807827, guid: 9810478df4a4e254f894d5f01086b374, type: 3}
+  _orkPrefab: {fileID: 4952580783379622584, guid: 23d5d975131f1e14eb84f6e72eb93305, type: 3}
+  _elfPrefab: {fileID: 4462635875572421305, guid: d919f9c8ec8a12f4eaff545319cfd371, type: 3}
+  _robotPrefab: {fileID: 4816976354446855833, guid: d213e80fec783f94293ec49f60748a9b, type: 3}

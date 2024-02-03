@@ -10,12 +10,6 @@ namespace Lesson_3.Scripts.Spawner
         [SerializeField] private List<Transform> _spawnPointsTransforms;
         private List<SpawnPoint> _spawnPoints;
 
-        private void Awake()
-        {
-            _spawnPoints = new List<SpawnPoint>();
-            _spawnPointsTransforms.ForEach(spawnPointTransform => _spawnPoints.Add(new SpawnPoint(spawnPointTransform.position)));
-        }
-
         public bool TryGetRandomPoint(out Vector3 spawnPosition)
         {
             spawnPosition = Vector3.zero;
@@ -31,6 +25,12 @@ namespace Lesson_3.Scripts.Spawner
 
         public void ReleasePoint(Vector3 spawnPosition) =>
             _spawnPoints.Find(point => point.SpawnPosition == spawnPosition)?.ReleasePoint();
+
+        private void Awake()
+        {
+            _spawnPoints = new List<SpawnPoint>();
+            _spawnPointsTransforms.ForEach(spawnPointTransform => _spawnPoints.Add(new SpawnPoint(spawnPointTransform.position)));
+        }
 
         private class SpawnPoint
         {
