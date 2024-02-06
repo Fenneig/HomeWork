@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3526346007451f8a821dbfa4afe8d9, type: 3}
+  m_Name: Passives repository
+  m_EditorClassIdentifier: 
+  _configs:
+  - {fileID: 11400000, guid: 8b0035b6f9aaccb42a206c3510de0411, type: 2}
+  - {fileID: 11400000, guid: 1ce00b34d5d9b1a41a1ee7b35fa13414, type: 2}
+  - {fileID: 11400000, guid: 17af5cffb9893f94eb861596dabfbd16, type: 2}
