@@ -2,8 +2,8 @@
 {
     public class SpawnerTracker
     {
-        private Spawner _spawner;
-        private int _maxWeight;
+        private readonly Spawner _spawner;
+        private readonly int _maxWeight;
 
         public SpawnerTracker(Spawner spawner, int maxWeight)
         {

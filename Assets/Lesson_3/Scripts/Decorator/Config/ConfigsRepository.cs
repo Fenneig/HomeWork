@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿using Lesson_3.Scripts.Decorator.Class;
+using Lesson_3.Scripts.Decorator.Passive;
+using Lesson_3.Scripts.Decorator.Race;
+using UnityEngine;
 
-namespace Lesson_3.Scripts.Decorator
+namespace Lesson_3.Scripts.Decorator.Config
 {
     [CreateAssetMenu(fileName = "Decorator configs", menuName = "Configs/decorator config")]
     public class ConfigsRepository : ScriptableObject

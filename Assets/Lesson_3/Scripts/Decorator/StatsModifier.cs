@@ -2,9 +2,9 @@
 {
     public abstract class StatsModifier : IStats
     {
-        protected IStats BaseStats;
+        protected readonly IStats BaseStats;
 
-        public StatsModifier(IStats baseStats) => BaseStats = baseStats;
+        protected StatsModifier(IStats baseStats) => BaseStats = baseStats;
 
         public virtual int Strength => BaseStats.Strength;
         public virtual int Intellect => BaseStats.Intellect;

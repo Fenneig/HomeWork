@@ -15,7 +15,7 @@ namespace Lesson_3.Scripts.Visitor
         [SerializeField] private FoeFactory _foeFactory;
 
         private bool _isSpawnerWork;
-        private List<Foe> _spawnedEnemies = new();
+        private readonly List<Foe> _spawnedEnemies = new();
 
         public event Action<Foe> SpawnNotified;
         public event Action<Foe> DeathNotified;

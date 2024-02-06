@@ -1,4 +1,4 @@
-﻿namespace Lesson_3.Scripts.Decorator
+﻿namespace Lesson_3.Scripts.Decorator.Race
 {
     public enum RaceType
     {

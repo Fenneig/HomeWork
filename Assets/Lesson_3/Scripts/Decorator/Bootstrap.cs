@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using Lesson_3.Scripts.Decorator.Class;
+using Lesson_3.Scripts.Decorator.Config;
+using Lesson_3.Scripts.Decorator.Passive;
+using Lesson_3.Scripts.Decorator.Race;
+using UnityEngine;
 
 namespace Lesson_3.Scripts.Decorator
 {

@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Lesson_3.Scripts.Editor.FactoryExample
+namespace Lesson_3.Scripts.FactoryExample.Editor.FactoryExample
 {
     [CustomPropertyDrawer(typeof(ImageIdAttribute))]
     public class ImageIdAttributeDrawer : PropertyDrawer

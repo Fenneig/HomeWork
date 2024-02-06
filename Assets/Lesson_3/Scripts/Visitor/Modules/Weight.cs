@@ -69,11 +69,11 @@ namespace Lesson_3.Scripts.Visitor.Modules
 
             public void Visit(Ork ork) => _weight.Value += _weightConfig.OrkWeight;
 
-            public void Visit(Human human)=> _weight.Value += _weightConfig.HumanWeight;
+            public void Visit(Human human) => _weight.Value += _weightConfig.HumanWeight;
 
-            public void Visit(Elf elf)=> _weight.Value += _weightConfig.ElfWeight;
+            public void Visit(Elf elf) => _weight.Value += _weightConfig.ElfWeight;
 
-            public void Visit(Robot robot)=> _weight.Value += _weightConfig.RobotWeight;
+            public void Visit(Robot robot) => _weight.Value += _weightConfig.RobotWeight;
 
             public void Visit(Foe foe) => Visit((dynamic) foe);
         }   
@@ -91,11 +91,11 @@ namespace Lesson_3.Scripts.Visitor.Modules
 
             public void Visit(Ork ork) => _weight.Value -= _weightConfig.OrkWeight;
 
-            public void Visit(Human human)=> _weight.Value -= _weightConfig.HumanWeight;
+            public void Visit(Human human) => _weight.Value -= _weightConfig.HumanWeight;
 
-            public void Visit(Elf elf)=> _weight.Value -= _weightConfig.ElfWeight;
+            public void Visit(Elf elf) => _weight.Value -= _weightConfig.ElfWeight;
 
-            public void Visit(Robot robot)=> _weight.Value -= _weightConfig.RobotWeight;
+            public void Visit(Robot robot) => _weight.Value -= _weightConfig.RobotWeight;
 
             public void Visit(Foe foe) => Visit((dynamic) foe);
         }

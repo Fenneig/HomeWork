@@ -1,5 +1,6 @@
 ﻿using System;
 using Lesson_3.Scripts.Decorator.Class;
+using Lesson_3.Scripts.Decorator.Config;
 using Lesson_3.Scripts.Decorator.Passive;
 using Lesson_3.Scripts.Decorator.Race;
 
@@ -7,7 +8,7 @@ namespace Lesson_3.Scripts.Decorator
 {
     public class StatProvider
     {
-        private ConfigsRepository _configsRepository;
+        private readonly ConfigsRepository _configsRepository;
 
         public StatProvider(ConfigsRepository configsRepository) => _configsRepository = configsRepository;
 

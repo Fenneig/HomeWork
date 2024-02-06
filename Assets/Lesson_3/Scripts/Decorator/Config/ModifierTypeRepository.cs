@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lesson_3.Scripts.Decorator
+namespace Lesson_3.Scripts.Decorator.Config
 {
     public abstract class ModifierTypeRepository<TConfig, TType> : ScriptableObject where TConfig : TypeConfig<TType>
     {
