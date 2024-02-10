@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Lesson_2.Scripts.NPC.Configs
+namespace Lesson_4.Scripts.NPC.Configs
 {
-    [CreateAssetMenu(menuName = "NPC/Lesson_2/Work config", fileName = "Work config")]
+    [CreateAssetMenu(menuName = "NPC/Lesson_4/Work config", fileName = "Work config")]
     public class WorkConfig : ScriptableObject
     {
         [field: SerializeField] public int WorkEnergyCost { get; private set; }

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Lesson_2.Scripts.NPC.Configs
+namespace Lesson_4.Scripts.NPC.Configs
 {
-    [CreateAssetMenu(menuName = "NPC/Lesson_2/Character config", fileName = "Character config")]
+    [CreateAssetMenu(menuName = "NPC/Lesson_4/Character config", fileName = "Character config")]
     public class CharacterConfig : ScriptableObject
     {
         [field: SerializeField, Range(1, 10)] public float MoveSpeed { get; private set; }
