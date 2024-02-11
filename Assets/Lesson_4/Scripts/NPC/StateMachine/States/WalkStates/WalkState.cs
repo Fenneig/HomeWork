@@ -1,6 +1,4 @@
-﻿using Lesson_4.Scripts.NPC.StateMachine;
-using Lesson_4.Scripts.NPC.StateMachine.States;
-using Lesson_4.Scripts.NPC.Units;
+﻿using Lesson_4.Scripts.NPC.Units;
 using UnityEngine;
 
 namespace Lesson_4.Scripts.NPC.StateMachine.States.WalkStates

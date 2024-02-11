@@ -1,5 +1,4 @@
 ﻿using Lesson_4.Scripts.NPC.Units;
-using Lesson_4.Scripts.NPC.StateMachine.States.WalkStates;
 
 namespace Lesson_4.Scripts.NPC.StateMachine.States.WalkStates
 {

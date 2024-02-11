@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _balloonType
       value: 
       objectReference: {fileID: 11400000, guid: ea4021216ad7e3e42b4ecd7e25fef9fe, type: 2}
+    - target: {fileID: 519876266578620852, guid: 0ed58143ca74c8941a0d2efed6acd985, type: 3}
+      propertyPath: _balloonType
+      value: 
+      objectReference: {fileID: 11400000, guid: b9eba98b711bd944ba104f26bf0fb1c3, type: 2}
     - target: {fileID: 1289515011150523192, guid: 0ed58143ca74c8941a0d2efed6acd985, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

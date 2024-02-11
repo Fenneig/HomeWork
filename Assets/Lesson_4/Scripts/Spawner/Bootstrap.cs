@@ -10,10 +10,7 @@ namespace Lesson_4.Scripts.Spawner
         [Inject]
         private void Construct(CoinSpawner coinSpawner) => _coinSpawner = coinSpawner;
         
-        private void Start()
-        {
-            _coinSpawner.StartSpawn();
-        }
+        private void Start() => _coinSpawner.StartSpawn();
 
         private void Update()
         {

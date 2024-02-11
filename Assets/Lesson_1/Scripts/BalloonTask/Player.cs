@@ -8,7 +8,9 @@ namespace Lesson_1.Scripts.BalloonTask
         {
             Ray ray = Camera.main.ScreenPointToRay(clickPosition);
             Physics.Raycast(ray, out var hit);
-            if (hit.collider.TryGetComponent(out Balloon balloon)) balloon.Burst();
+            
+            if (hit.collider.TryGetComponent(out Balloon balloon)) 
+                balloon.Burst();
         }
     }
 }
